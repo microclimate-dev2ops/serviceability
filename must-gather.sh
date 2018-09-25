@@ -10,10 +10,6 @@ output="Microclimate must gather information, gathered $(date)."
 function setDefaults {
   release="microclimate"
   namespace="default"
-
-  # todo format this and use instead
-  #output_location="${release}-${namespace}-$(date)-logs.txt"
-
   output_location="${release}-${namespace}-logs.txt"
   tiller_namespace="kube-system"
   workspace="microclimate-workspace"
@@ -263,7 +259,12 @@ while getopts ":r:n:o:t:s" opt; do
 done
 
 label_flag="-l app=${release}-ibm-microclimate"
-output_location="${release}-${namespace}-$(date +%Y%m%d%H%M%S)-logs.txt"
+# Only set the outout location if not supplied
+if [ -z $output_location ]
+then
+  echo "ouutput location not provided"
+  output_location="${release}-${namespace}-$(date +%Y%m%d%H%M%S)-logs.txt"
+fi
 # Set the context namespace for all kuubectl commands
 kubectl config set-context $(kubectl config current-context) --namespace=${namespace}
 
