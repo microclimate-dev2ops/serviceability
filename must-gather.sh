@@ -261,7 +261,6 @@ label_flag="-l app=${release}-ibm-microclimate"
 # Only set the outout location if not supplied
 if [ -z $output_location ]
 then
-  echo "ouutput location not provided"
   output_location="${release}-${namespace}-$(date +%Y%m%d%H%M%S)-logs.txt"
 fi
 # Set the context namespace for all kuubectl commands
