@@ -10,7 +10,6 @@ output="Microclimate must gather information, gathered $(date)."
 function setDefaults {
   release="microclimate"
   namespace="default"
-  output_location="${release}-${namespace}-logs.txt"
   tiller_namespace="kube-system"
   workspace="microclimate-workspace"
   output=""
