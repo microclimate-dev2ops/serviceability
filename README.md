@@ -1,5 +1,8 @@
 # serviceability
-Repository for useful serviceability files, e.g. scripts we'll advise users to run, any Dockerfiles if we containerise them, any particularly useful snippets
+Scripts provided here help users debug Microclimate problems: or help a Microclimate developer to better triage a user problem.
+
+## Disclaimer
+Please be sure you are happy sharing any data this tool gathers before doing so: it is up to a user to check no sensitive data is shared, be it credential related, sensitive project related or otherwise. As the script is provided here and so completely open-source, you can check for yourself what the script does prior to execution. Feedback, contributions, ideas and bug fixes all welcome!
 
 ## Must-gather usage
 
